@@ -25,13 +25,13 @@ RUN  wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://
 RUN tar xzf jre-8u151-linux-x64.tar.gz && rm jre-8u151-linux-x64.tar.gz
 
 # Config Java 8 alternatives
-RUN alternatives --install /usr/bin/java java /usr/local/jre-8u151-linux-x64/bin/java 2
+RUN alternatives --install /usr/bin/java java /usr/local/jre1.8.0_151/bin/java 2
 
 # Config Java 8 Path
-ENV JAVA_HOME /usr/local/jre-8u151-linux-x64
-ENV JAVA_JRE  /usr/local/jre-8u151-linux-x64
+ENV JAVA_HOME /usr/local/jre1.8.0_151
+ENV JAVA_JRE  /usr/local/jre1.8.0_151
 
-RUN PATH=$PATH:/usr/local/jre-8u151-linux-x64/bin
+RUN PATH=$PATH:/usr/local/jre1.8.0_151/bin
 # end --> 
 
 # JVM Memory config
