@@ -21,17 +21,17 @@ WORKDIR /usr/local
 
 # If you want to use JRE, please uncomment the following section
 #<!-- start
-RUN  wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.tar.gz
-RUN tar xzf jre-8u151-linux-x64.tar.gz && rm jre-8u151-linux-x64.tar.gz
+RUN  wget -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jre-8u161-linux-x64.tar.gz
+RUN tar xzf jre-8u161-linux-x64.tar.gz && rm jre-8u161-linux-x64.tar.gz
 
 # Config Java 8 alternatives
-RUN alternatives --install /usr/bin/java java /usr/local/jre1.8.0_151/bin/java 2
+RUN alternatives --install /usr/bin/java java /usr/local/jre1.8.0_161/bin/java 2
 
 # Config Java 8 Path
-ENV JAVA_HOME /usr/local/jre1.8.0_151
-ENV JAVA_JRE  /usr/local/jre1.8.0_151
+ENV JAVA_HOME /usr/local/jre1.8.0_161
+ENV JAVA_JRE  /usr/local/jre1.8.0_161
 
-RUN PATH=$PATH:/usr/local/jre1.8.0_151/bin
+RUN PATH=$PATH:/usr/local/jre1.8.0_161/bin
 # end --> 
 
 # JVM Memory config
